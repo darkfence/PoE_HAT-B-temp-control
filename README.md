@@ -7,7 +7,7 @@ The script configures a system service that will be launched at startup.
 
 For the prepared program to work, set the switch controlling the fan to the off position (P0). If you are not sure which position P0 is in, set the switch so that the fan does not work when the power is on.
 
-You can adjust the temperature at which the fan will be activated as well as at which it will stop working. To do this, edit PoE_HAT_B_code/main.py by making changes to line 20. 
+You can adjust the temperature at which the fan will be activated as well as at which it will stop working. To do this, edit ```PoE_HAT_B_code/main.py``` by making changes to line 20. 
 
 ```python
         POE.POE_HAT_Display(65, 45)
@@ -21,6 +21,8 @@ cd ~
 git clone https://github.com/darkfence/PoE_HAT-B-temp-control.git && cd PoE_HAT-B-temp-control
 bash setup.sh
 ```
+
+To change the temperature range after installation edit ```~/.poe_hat/main.py``` and run ```sudo systemctl restart poe-hat.service```. 
 
 To remove and disable the service, run these commands
 ```bash
